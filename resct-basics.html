@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="reat-basic.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      const button = <button>hello</button>;
+      const paragraph = <p>paragraph of text</p>;
+      const Name = "Himasara";
+      const productCost = 10 + 8 * 2;
+      console.log(productCost);
+
+      const paragraph1 = <p>Product cost: ${productCost}</p>;
+
+      const shippingCost = 5;
+
+      const totalCost = productCost + shippingCost;
+
+      const div = (
+        <div>
+          <button>hello</button>
+          <p>paragraph of text {2 + 2}</p>
+          <button>Good Job</button>
+          <p>My name is {Name}</p>
+
+          <p> </p>
+          <p>Cotton sockes</p>
+          <p>Price: $10</p>
+          <button>Add to Cart</button>
+
+          <p>{paragraph1}</p>
+
+          <p>Product cost: ${productCost}</p>
+          <p>ShippingCost cost: ${shippingCost}</p>
+          <p>TotalCost: ${totalCost}</p>
+          <button>Place your order</button>
+        </div>
+      );
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(div);
+    </script>
+  </body>
+</html>
