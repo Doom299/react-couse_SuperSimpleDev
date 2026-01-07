@@ -1,4 +1,4 @@
-import "./checkout-header.css";
+import { CheckoutHeader } from "./CheckoutHeader";
 import "./CheckoutPage.css";
 
 export function CheckoutPage() {
@@ -28,6 +28,8 @@ export function CheckoutPage() {
           </div>
         </div>
       </div>
+
+      <CheckoutHeader />
 
       <div className="checkout-page">
         <div className="page-title">Review your order</div>
