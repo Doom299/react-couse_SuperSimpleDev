@@ -16,11 +16,11 @@ export function CheckoutHeader() {
         </div>
 
         <div className="checkout-header-middle-section">
-          Checkout ( Checkout (
+          Checkout (
           <Link className="return-to-home-link" to="/">
             3 items
           </Link>
-          ) )
+          )
         </div>
 
         <div className="checkout-header-right-section">
