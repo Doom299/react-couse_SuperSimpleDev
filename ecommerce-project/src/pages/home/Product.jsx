@@ -7,21 +7,17 @@ export function Product({ product, loadCart }) {
   const [quantity, setQuantity] = useState(1);
 
   const addToCart = async () => {
-    async () => {
-      await axios.post("/api/cart-items", {
-        productId: product.id,
-        quantity,
-      });
-      await loadCart();
-    };
+    await axios.post("/api/cart-items", {
+      productId: product.id,
+      quantity,
+    });
+    await loadCart();
+  };
 
-    const selectQuantity = (event) => {
-      (event) => {
-        const quantitySelected = Number(event.target.value);
-        setQuantity(quantitySelected);
-        console.log(quantitySelected);
-      };
-    };
+  const selectQuantity = (event) => {
+    const quantitySelected = Number(event.target.value);
+    setQuantity(quantitySelected);
+    console.log(quantitySelected);
   };
 
   return (
@@ -45,7 +41,7 @@ export function Product({ product, loadCart }) {
       <div className="product-price">{formatMoney(product.priceCents)}</div>
 
       <div className="product-quantity-container">
-        <select value={quantity} onChange={setQuantity}>
+        <select value={quantity} onChange={selectQuantity}>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
